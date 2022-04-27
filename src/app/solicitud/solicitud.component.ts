@@ -17,4 +17,8 @@ export class SolicitudComponent implements OnInit {
   }
 
   nombre = "Angelillo";
+
+  saludolog(){
+    console.log('Hola');
+  }
 }

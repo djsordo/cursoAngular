@@ -12,4 +12,5 @@ export class SolicitudComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  nombre = "Angelillo";
 }

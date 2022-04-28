@@ -1,10 +1,17 @@
+<p *ngIf="solicitud.nombre.length > 10">El nombre tiene más de 10 caracteres</p>
+
 <h1>Solicitud de comedor</h1>
 <h2>Nueva solicitud</h2>
-<label>Nombre</label>
-<input (keyup)="nombre($event)" [class]="colorNombre">
 
-<label>Apellidos</label>
-<input (keyup)="apellidos($event)" class="{{colorApe}}">
+<div>
+  <label>Nombre</label>
+  <input (keyup)="nombre($event)" [class]="colorNombre">
+</div>
+
+<div>
+  <label>Apellidos</label>
+  <input (keyup)="apellidos($event)" class="{{colorApe}}">
+</div>
 
 <button>Enviar</button>
 

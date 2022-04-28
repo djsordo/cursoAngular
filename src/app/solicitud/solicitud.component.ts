@@ -8,16 +8,45 @@ import { Component, OnInit } from '@angular/core';
 export class SolicitudComponent implements OnInit {
 
   constructor() {
-    setInterval(() => {
-      this.nombre = '' + Math.random();
-    }, 2000)
+
   }
 
   ngOnInit(): void {
   }
 
-  nombre = "Angelillo";
+  solicitud = {
+    nombre: "Ángel",
+    apellidos: "Vitores Macón"
+  }
 
+  colorNombre = 'azul';
+  colorApe = 'azul';
+
+  nombre($event: KeyboardEvent){
+    const element = $event.target as HTMLInputElement;
+
+    if (element.value.length > 10) {
+      this.colorNombre = 'rojo';
+    }
+    else {
+      this.colorNombre = 'azul';
+    }
+
+    this.solicitud.nombre = element.value;
+  }
+
+  apellidos($event: KeyboardEvent){
+    const element = $event.target as HTMLInputElement;
+
+    if (element.value.length > 15) {
+      this.colorApe = 'rojo';
+    }
+    else {
+      this.colorApe = 'azul';
+    }
+
+    this.solicitud.apellidos = element.value;
+  }
   saludolog(){
     console.log('Hola');
   }

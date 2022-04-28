@@ -1,2 +1,14 @@
-<p [style.color]="+nombre > 0.5 ? 'red' : 'blue'">Solicitud Works!</p>
+<h1>Solicitud de comedor</h1>
+<h2>Nueva solicitud</h2>
+<label>Nombre</label>
+<input (keyup)="nombre($event)" [class]="colorNombre">
+
+<label>Apellidos</label>
+<input (keyup)="apellidos($event)" class="{{colorApe}}">
+
+<button>Enviar</button>
+
+<p>{{solicitud.nombre}}</p>
+<p>{{solicitud.apellidos}}</p>
+
 <button (click)="saludolog()">Botón que saca un log</button>

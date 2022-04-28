@@ -15,6 +15,15 @@
 
 <button>Enviar</button>
 
+<div>
+  <table>
+    <tr *ngFor="let sol of solicitudes">
+      <td>{{sol.nombre}}</td>
+      <td>{{sol.apellidos}}</td>
+    </tr>
+  </table>
+</div>
+
 <p>{{solicitud.nombre}}</p>
 <p>{{solicitud.apellidos}}</p>
 

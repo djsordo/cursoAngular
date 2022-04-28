@@ -22,6 +22,21 @@ export class SolicitudComponent implements OnInit {
   colorNombre = 'azul';
   colorApe = 'azul';
 
+  solicitudes = [
+    {
+      nombre: "Ángel Juan",
+      apellidos: "Vitores Macón"
+    },
+    {
+      nombre: "Antonio",
+      apellidos: "Pérez Gómez"
+    },
+    {
+      nombre: "Cecilia",
+      apellidos: "de la Orden Pi"
+    },
+  ]
+
   nombre($event: KeyboardEvent){
     const element = $event.target as HTMLInputElement;
 

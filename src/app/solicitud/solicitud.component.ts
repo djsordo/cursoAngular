@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolicitudComponent implements OnInit {
 
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -18,6 +16,8 @@ export class SolicitudComponent implements OnInit {
     nombre: "Ángel",
     apellidos: "Vitores Macón"
   }
+
+  centro = 'Centro 1';
 
   colorNombre = 'azul';
   colorApe = 'azul';
@@ -62,7 +62,5 @@ export class SolicitudComponent implements OnInit {
 
     this.solicitud.apellidos = element.value;
   }
-  saludolog(){
-    console.log('Hola');
-  }
+
 }

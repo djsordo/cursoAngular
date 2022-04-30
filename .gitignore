@@ -42,5 +42,6 @@ testem.log
 Thumbs.db
 
 # Para poder seguir el curso en casa y en el trabajo debido al proxy de la Junta
-/package-lock.json
+
 /package-lock.jcyl.json
+package-lock.json

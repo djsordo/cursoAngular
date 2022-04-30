@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-centro',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./centro.component.css']
 })
 export class CentroComponent implements OnInit {
-
+  @Input() centro:any;
   constructor() { }
 
   ngOnInit(): void {

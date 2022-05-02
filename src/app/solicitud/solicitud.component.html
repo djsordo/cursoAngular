@@ -20,6 +20,7 @@
     <tr *ngFor="let sol of solicitudes">
       <td>{{sol.nombre}}</td>
       <td>{{sol.apellidos}}</td>
+      <td>{{sol.nacimiento | date: 'dd/MM/yyyy'}}</td>
     </tr>
   </table>
 </div>

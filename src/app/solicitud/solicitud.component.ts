@@ -25,15 +25,18 @@ export class SolicitudComponent implements OnInit {
   solicitudes = [
     {
       nombre: "Ángel Juan",
-      apellidos: "Vitores Macón"
+      apellidos: "Vitores Macón",
+      nacimiento: new Date(1972, 4, 23)
     },
     {
       nombre: "Antonio",
-      apellidos: "Pérez Gómez"
+      apellidos: "Pérez Gómez",
+      nacimiento: new Date(1984, 11, 24)
     },
     {
       nombre: "Cecilia",
-      apellidos: "de la Orden Pi"
+      apellidos: "de la Orden Pi",
+      nacimiento: new Date(1991, 1, 1)
     },
   ]
 

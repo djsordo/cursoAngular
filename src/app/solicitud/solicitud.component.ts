@@ -66,4 +66,8 @@ export class SolicitudComponent implements OnInit {
     this.solicitud.apellidos = element.value;
   }
 
+  borrarSolicitud(solicitud:any){
+    console.log("La solicitud de " + solicitud.nombre + " " + solicitud.apellidos + " ha sido borrada")
+  }
+
 }

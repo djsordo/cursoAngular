@@ -1,5 +1,16 @@
 <p *ngIf="solicitud.nombre.length > 10">El nombre tiene más de 10 caracteres</p>
 
+
+<div>
+  <h2>Solicitudes</h2>
+  <table>
+    <tr *ngFor="let sol of solicitudes">
+      <app-selector-solicitante [sol]="sol" (solicitudBorrada)="borrarSolicitud(sol)"></app-selector-solicitante>
+    </tr>
+  </table>
+</div>
+
+
 <h1>Solicitud de comedor</h1>
 <h2>Nueva solicitud</h2>
 
@@ -13,20 +24,7 @@
   <input (keyup)="apellidos($event)" class="{{colorApe}}">
 </div>
 
-<button>Enviar</button>
-
-<div>
-  <table>
-    <tr *ngFor="let sol of solicitudes">
-      <td>{{sol.nombre}}</td>
-      <td>{{sol.apellidos}}</td>
-      <td>{{sol.nacimiento | date: 'dd/MM/yyyy'}}</td>
-    </tr>
-  </table>
-</div>
-
-<p>{{solicitud.nombre}}</p>
-<p>{{solicitud.apellidos}}</p>
-
-<app-centro [centro]="centro"></app-centro>
+<!-- <app-centro [centro]="centro"></app-centro> -->
 <app-selector-centro></app-selector-centro>
+
+<button>Enviar</button>

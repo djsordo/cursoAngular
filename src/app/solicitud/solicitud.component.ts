@@ -1,3 +1,4 @@
+import { SolicitudesService } from './../solicitudes.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solicitud.component.css']
 })
 export class SolicitudComponent implements OnInit {
+  solicitudes: any
 
-  constructor() { }
+  constructor(private solicitudesService: SolicitudesService) {
+    this.solicitudes = solicitudesService.getSolicitudes()
+   }
 
   ngOnInit(): void {
   }
@@ -22,7 +26,8 @@ export class SolicitudComponent implements OnInit {
   colorNombre = 'azul';
   colorApe = 'azul';
 
-  solicitudes = [
+
+/*   solicitudes = [
     {
       nombre: "Ángel Juan",
       apellidos: "Vitores Macón",
@@ -38,7 +43,7 @@ export class SolicitudComponent implements OnInit {
       apellidos: "de la Orden Pi",
       nacimiento: new Date(1991, 1, 1)
     },
-  ]
+  ] */
 
   nombre($event: KeyboardEvent){
     const element = $event.target as HTMLInputElement;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-centros',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./centros.component.css']
 })
 export class CentrosComponent implements OnInit {
+  centroId:any
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    route.params.subscribe(
+      params => this.centroId = params['centroId']
+    )
+   }
 
   ngOnInit(): void {
   }

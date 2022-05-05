@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SolicitudComponent } from './solicitud/solicitud.component';
 
 const routes: Routes = [
-  {path: 'centros', component: CentrosComponent},
+  {path: 'centros/:centroId', component: CentrosComponent},
   {path: 'solicitud', component: SolicitudComponent},
 ];
 

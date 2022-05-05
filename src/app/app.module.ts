@@ -8,6 +8,7 @@ import { SolicitudComponent } from './solicitud/solicitud.component';
 import { CentroComponent } from './centro/centro.component';
 import { SelectorCentroComponent } from './selector-centro/selector-centro.component';
 import { SelectorSolicitanteComponent } from './selector-solicitante/selector-solicitante.component';
+import { CentrosComponent } from './centros/centros.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SelectorSolicitanteComponent } from './selector-solicitante/selector-so
     SolicitudComponent,
     CentroComponent,
     SelectorCentroComponent,
-    SelectorSolicitanteComponent
+    SelectorSolicitanteComponent,
+    CentrosComponent
   ],
   imports: [
     HttpClientModule,

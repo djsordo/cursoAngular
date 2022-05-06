@@ -7,13 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solicitud.component.css']
 })
 export class SolicitudComponent implements OnInit {
-  solicitudes: any
+  solicitudes$: any
 
   constructor(private solicitudesService: SolicitudesService) {
-    solicitudesService.getSolicitudes().then(
-      (data:any) => this.solicitudes = data.items.map((x:any) => x.fields)
-
-      )
+    this.solicitudes$ = solicitudesService.getSolicitudes()
    }
 
   ngOnInit(): void {

@@ -1,3 +1,4 @@
+import { SolicitudModule } from './solicitud/solicitud.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http'
@@ -13,16 +14,14 @@ import { CentrosComponent } from './centros/centros.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SolicitudComponent,
     CentroComponent,
-    SelectorCentroComponent,
-    SelectorSolicitanteComponent,
     CentrosComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SolicitudModule
   ],
   providers: [],
   bootstrap: [AppComponent]

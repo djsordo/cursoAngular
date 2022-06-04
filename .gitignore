@@ -40,3 +40,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Para poder seguir el curso en casa y en el trabajo debido al proxy de la Junta
+
+/package-lock.jcyl.json
+package-lock.json
